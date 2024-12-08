@@ -1,0 +1,148 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(45deg, #6ab1d7, #0d9a88);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Stopwatch Container */
+.stopwatch-container {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  width: 320px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation for Fade In */
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+      transform: translateY(-50px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Title Styling */
+h1 {
+  font-size: 36px;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Stopwatch Time Display */
+#timeDisplay {
+  font-size: 50px;
+  font-weight: 700;
+  color: #333;
+  background: #f1f1f1;
+  padding: 10px 20px;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 30px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Control Button Styling */
+.controls button {
+  padding: 12px 25px;
+  margin: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  width: 100%;
+}
+
+#startPauseBtn {
+  background: #4CAF50;
+}
+
+#resetBtn {
+  background: #f44336;
+}
+
+#lapBtn {
+  background: #2196F3;
+}
+
+/* Hover Effects for Buttons */
+.controls button:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+/* Lap Times Section */
+.lap-times {
+  margin-top: 20px;
+  width: 100%;
+}
+
+#lapList {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#lapList li {
+  font-size: 16px;
+  color: #555;
+  padding: 8px;
+  margin: 5px 0;
+  background: #f7f7f7;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover Effect for Lap Times */
+#lapList li:hover {
+  background-color: #e0e0e0;
+  transform: translateX(5px);
+}
+
+/* Focus Effects for Input Fields */
+input[type="text"], input[type="number"] {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin: 5px 0;
+  width: 100%;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Input Focus Styling */
+input[type="text"]:focus, input[type="number"]:focus {
+  border-color: #2196F3;
+  box-shadow: 0 0 5px rgba(33, 150, 243, 0.5);
+}
+
+/* General Button Hover Styling */
+button:active {
+  transform: scale(0.98);
+}
